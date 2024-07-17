@@ -4,6 +4,10 @@
       border: border-box;
 }
 
+html {
+      scroll-behavior: smooth;
+}
+
 body a {
       text-decoration: none;
       color: white;
@@ -13,9 +17,9 @@ body a {
       box-sizing: border-box
 }
 
-/* Blur Styling */
+/* Dim Brightness Styling */
 .background-content {
-      transition: filter 0.3s ease;
+      transition: filter 0.6s ease;
 }
 
 .blur {
@@ -70,11 +74,13 @@ body a {
       height: 40px;
       border-radius: 4px;
       justify-content: space-evenly;
+      border: none;
 }
 
 select {
-      background-color: #f3f3f3;
+      background-color: #ddd;
       width: 50px;
+      color: #666666;
       text-align: center;
       border-top-left-radius: 4px;
       border-bottom-left-radius: 4px;
@@ -82,10 +88,24 @@ select {
       cursor: pointer;
 }
 
+select:hover {
+      background-color: #cecece;
+      transition: all 500ms ease;
+}
+
+select option {
+      background-color: #fff;
+      color: #111111;
+      height: 1rem;
+      font-size: 0.97rem;
+      text-align: left;
+}
+
 .nav-search input {
       width: 100%;
       font-size: 1rem;
       border: none;
+      outline: none;
 }
 
 .icon-search {
@@ -134,8 +154,12 @@ select {
 }
 
 .categories {
-      width: 94%;
+      width: 100%;
       font-size: 0.85rem;
+}
+
+.all-categories {
+      margin-left: 1rem;
 }
 
 .deals a {
@@ -144,11 +168,11 @@ select {
 
 /* SIDEBAR */
 .top-logo {
-      position: fixed;
+      position: absolute;
       background-color: #232F3E;
       color: #232F3E;
-      padding: 0.80rem;
-      width: 26%;
+      padding: 1rem;
+      width: 100%;
       margin-bottom: 4.5rem;
 }
 
@@ -168,9 +192,10 @@ aside {
 
 aside .close {
       position: absolute;
-      top: 1px;
+      top: 0.5rem;
       color: white;
-      margin-left: 19rem;
+      right: 1rem;
+      /* margin-left: 19rem; */
       display: block;
       cursor: pointer;
       font-size: 2rem;
@@ -181,12 +206,7 @@ aside .close {
             left: 0;
       }
 }
-/* 
-@keyframes hideMenu {
-      to {
-            right: 0;
-      }
-} */
+
 aside .sidebar .info .arrow {
       color: #917a7a;
       font-size: 1rem;
@@ -274,6 +294,7 @@ aside .sidebar a {
 /* Slideshow container */
 .slideshow-container {
       max-width: 100%;
+      min-height: 25vh;
       position: relative;
       margin: auto;
 }
@@ -296,7 +317,7 @@ aside .sidebar a {
       width: auto;
       margin-top: -22px;
       padding: 16px;
-      color: white;
+      color: #222121;
       font-weight: bold;
       font-size: 18px;
       transition: 0.6s ease;
@@ -312,6 +333,7 @@ aside .sidebar a {
 .prev:hover,
 .next:hover {
       background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
 }
 
 .fade {
@@ -340,7 +362,7 @@ aside .sidebar a {
 
 .msg {
       position: absolute;
-      top: 17rem;
+      top: 80%;
       background-color: white;
       color: black;
       width: 95%;
@@ -357,6 +379,10 @@ aside .sidebar a {
       color: #2a7e5e;
 }
 
+.msg a:hover {
+      color: #b3310a;
+      text-decoration: underline;
+}
 
 
 /* Shopping section */
@@ -365,7 +391,7 @@ aside .sidebar a {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-evenly;
-      background-color: #d6e7fc;
+      background-color: #e9f3ff;
 }
 
 .box {
@@ -390,7 +416,6 @@ aside .sidebar a {
 .box-img {
       height: auto;
       margin-top: 1rem;
-      /* margin: 0.5rem; */
       margin-bottom: 1rem;
       width: 100%;
       display: flex;
@@ -475,7 +500,11 @@ aside .sidebar a {
 
 .content a {
       color: #2a7e5e;
-      margin-top: 19px;
+      margin-bottom: 0.1rem;
+}
+
+.content a:hover {
+      color: #b3310a;
 }
 
 .signin-temp {
@@ -502,15 +531,20 @@ aside .sidebar a {
 
 .signin button {
       font-size: 0.85rem;
-      background-color: #febf13;
+      background-color: #ffc62a;
       color: black;
       width: 230px;
-      height: 28px;
+      height: 30px;
       border-radius: 5px;
       font-weight: 550;
       border: none;
-      text-shadow: 0 1px 0 #fde5a8;
       cursor: pointer;
+}
+
+.signin button:hover {
+      background-color: #f3d424;
+      text-shadow: 0 1px 0 #fde5a8;
+      transition: all 400ms ease;
 }
 
 .new {
@@ -551,7 +585,7 @@ footer {
 
 .info-pages {
       background-color: #202c3a;
-      height: 300px;
+      height: auto;
       color: white;
       font-size: 0.9rem;
       display: flex;
@@ -575,7 +609,8 @@ ul a {
 
 .footer-logo {
       background-color: #202c3a;
-      height: 100px;
+      height: auto;
+      padding: 1.2rem;
       color: #dddddd;
       border-top: 0.5px solid #dddddd;
       display: flex;
@@ -606,29 +641,10 @@ ul a {
       cursor: pointer;
 }
 
-/* .redirect-links  {
-      color: #999999;
-      font-size: 0.8rem;
-      margin-left: 2rem;
-      margin-right: 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-}
-
-.redirect-links span {
-      color: #dddddd;
-      font-size: 0.9rem;
-      font-weight: 500;
-}
-
-.redirect-links a:hover {
-      text-decoration: underline;
-} */
-
 .copyright-info {
       background-color: #131a22;
-      height: 70px;
+      height: auto;
+      padding: 1rem;
       color: white;
 }
 
@@ -658,34 +674,39 @@ ul a {
       color: #dddddd;
 }
 
+/* ==================Media queries========================= */
 @media screen and (max-width: 1200px) {
-      .msg {
-            top: 12.5rem;
-      }
-
       .nav-search {
             width: 45%;
       }
 
       .box2 {
-            height: 200px;
+            height: auto;
+      }
+
+      .content h2 {
+            font-size: 1rem;
+      }
+
+      .content p {
+            font-size: 0.85rem;
       }
 
       .movies-img {
             width: 70%;
-            height: 150px;
+            height: 160px;
             margin-top: 0.5rem;
       }
 
       .books-img {
-            width: 70%;
-            height: 140px;
+            width: 80%;
+            height: 160px;
             margin-top: 0.5rem;
       }
 
       .games-img {
-            width: 60%;
-            height: 140px;
+            width: 70%;
+            height: 160px;
             margin-top: 0.5rem;
       }
 
@@ -700,26 +721,15 @@ ul a {
 }
 
 @media screen and (max-width: 1100px) {
-      .msg {
-            top: 13rem;
-      }
-
       .mySlides {
-            aspect-ratio: 16/4;
-      }
-}
-
-@media screen and (max-width: 1000px) {
-      .msg {
-            top: 12.5rem;
-            font-size: 0.8rem;
+            aspect-ratio: 16/5;
       }
 }
 
 
 @media screen and (max-width: 900px) {
       .mySlides {
-            aspect-ratio: 16/5;
+            aspect-ratio: 16/6;
       }
 
       .nav-search {
@@ -731,37 +741,54 @@ ul a {
             width: 47%;
       }
 
-      .box2 {
-            height: 170px;
+      .box img {
+            width: 90%;
       }
 
-      .msg {
-            text-align: center;
-            top: 12rem;
+      .box2 {
+            height: auto;
+      }
+
+      .msg p {
             font-size: 0.8rem;
-            height: 35px;
+            width: 90%;
       }
 
       .movies-img {
             width: 60%;
-            height: 110px;
+            height: 140px;
             margin-top: 0.5rem;
       }
 
       .books-img {
             width: 60%;
-            height: 120px;
+            height: 140px;
             margin-top: 0.5rem;
       }
 
+      .book2 {
+            display: none;
+      }
+
+      .book3 {
+            visibility: hidden;
+      }
+
+      .movie2 {
+            visibility: hidden;
+      }
+
       .games-img {
-            width: 60%;
-            height: 125px;
+            width: 65%;
+            height: 160px;
             margin-top: 0.5rem;
             margin-right: 2rem;
-            
       }
-      
+
+      .game1 {
+            visibility: hidden;
+      }
+
       .games-img .visible {
             visibility: hidden;
       }
@@ -770,8 +797,154 @@ ul a {
             width: 38%;
             height: auto;
       }
+
+      .small-box-img2 {
+            width: 10%;
+            height: 55px;
+      }
 }
 
-@media screen and (max-width: 768px) {
-      /* Change in navbar  */
+@media screen and (max-width: 700px) {
+      .mySlides {
+            aspect-ratio: 16/6;
+      }
+
+      .nav-logo {
+            position: absolute;
+            left: 1rem;
+      }
+
+      .amazon-logo {
+            /* margin: auto; */
+            width: 90%;
+            height: 45px;
+      }
+
+      .nav-search {
+            display: none;
+      }
+
+      .nav-signin {
+            display: none;
+      }
+
+      .nav-address {
+            display: none;
+      }
+
+      .nav-cart {
+            position: absolute;
+            /* top: 0.2rem; */
+            right: 1.2rem;
+      }
+
+      .navbar p {
+            font-size: 0.7rem;
+      }
+
+      select option {
+            font-size: 0.7rem;
+            height: 0.5rem;
+            text-align: left;
+      }
+
+      .nav-panel a {
+            font-size: 0.7rem;
+            margin-left: 0.7rem;
+      }
+
+      .all-categories {
+            margin-right: 0.6rem;
+      }
+
+      aside {
+            width: 17rem;
+      }
+
+      aside .top-logo h2 {
+            font-size: 1.1rem;
+      }
+
+      aside .sidebar h3 {
+            font-size: 0.95rem;
+      }
+
+      aside .sidebar a {
+            font-size: 0.8rem;
+      }
+
+      .msg {
+            top: 64%;
+      }
+
+      .msg p {
+            font-size: 0.6rem;
+      }
+
+      .box img {
+            width: 100%;
+            height: auto;
+      }
+
+      .books-img img {
+            width: 60%;
+            height: auto;
+      }
+
+      .small-box-img2 {
+            width: 10%;
+            height: 40px;
+      }
+
+      .tv {
+            visibility: hidden;
+      }
+
+      .movie1 {
+            visibility: hidden;
+      }
+
+      .book1 {
+            visibility: hidden;
+      }
+
+      .movies-img {
+            width: 50%;
+            height: 110px;
+            margin-top: 0.5rem;
+      }
+
+      .books-img {
+            width: 50%;
+            height: 110px;
+            margin-top: 0.5rem;
+      }
+
+      .games-img {
+            width: 45%;
+            height: 106px;
+            margin-top: 0.5rem;
+      }
+
+      .footer-logo .btn {
+            height: 30px;
+            width: 130px;
+            margin-top: 0.6rem;
+      }
+
+      .info-pages ul a {
+            font-size: 0.54rem;
+      }
+
+      .info-pages ul h3 {
+            font-size: 0.8rem;
+      }
+
+      .copyright-info a {
+            font-size: 0.55rem;
+      }
+
+      .copyright-info p {
+            font-size: 0.55rem;
+      }
 }

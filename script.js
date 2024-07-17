@@ -2,35 +2,32 @@ const sideMenu = document.querySelector("aside");
 const menuBtn = document.querySelector("#menu-btn");
 const closeBtn = document.querySelector("#close-btn");
 
+// To show menu bar
 menuBtn.addEventListener('click', () => {
       sideMenu.style.display = 'block';
-      mainBody.style.background.display='transparent';
+      mainBody.style.background.display = 'transparent';
 })
 
+// To close menu bar
 closeBtn.addEventListener('click', () => {
       sideMenu.style.display = 'none';
 })
 
-// sideMenu.addEventListener('click', () => {
-//       if (e.target.classList.contains('sideMenu')) 
-// })
-
-// To blur the background dynamically by clicking the menu bar button 
+// To dim the background dynamically by clicking the menu bar button 
 document.getElementById('menu-btn').addEventListener('click', function () {
       const backgroundContent = document.querySelector('.background-content');
       backgroundContent.classList.toggle('blur');
 })
 
 
-// To blur the background dynamically by clicking the close button bar
+// To dim the background dynamically by clicking the close button bar
 document.getElementById('close-btn').addEventListener('click', function () {
       const backgroundContent = document.querySelector('.background-content');
       backgroundContent.classList.remove('blur');
 })
 
 
-
-// Slider
+// Slider JS
 let slide_Index = 1;
 showSlides(slide_Index);
 
