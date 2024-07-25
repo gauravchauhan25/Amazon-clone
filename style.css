@@ -162,6 +162,11 @@ select option {
       margin-left: 1rem;
 }
 
+.all-categories a {
+      display: flex;
+      gap: 0.4rem;
+}
+
 .deals a {
       font-size: 0.9rem;
 }
